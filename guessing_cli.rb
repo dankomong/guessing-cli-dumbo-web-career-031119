@@ -4,6 +4,11 @@ def run_guessing_game
   input = ""
   while input do
     puts "Guess a random number between 1 and 6 inclusive"
-    input = gets.chomp
+    input = gets.chomp.to_i
+    if input == num
+      puts "You guess the correct number!"
+    else
+      puts "The computer guessed #{num}"
+    end
   end
 end
